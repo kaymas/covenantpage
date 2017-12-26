@@ -1,0 +1,156 @@
+.hovered::before
+  width: 107px
+
+@import url('https://fonts.googleapis.com/css?family=Iceland|Open+Sans')
+
+html
+  font-size: 10px
+  height: 100%
+  // box-sizing: border-box
+
+body
+  font-size: 1.6rem
+  height: 100%
+  padding: 0
+  margin: 0
+  background-color: #111
+  font-family: 'Open Sans', sans-serif
+  // background-image: url('covenant_back.jpg')
+  // background-position: center
+  // background-repeat: no-repeat
+  // background-size: cover
+  // background-attachment: fixed
+
+.header
+  border-bottom: 1px solid #777
+  padding: 20px
+  position: relative
+
+  .left-arrow,.right-arrow
+    width: 35px
+    height: 35px
+    background-color: #4DD0E1
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+
+    .fa
+      font-size: 3.2rem
+      color: #444
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+
+  .left-arrow
+    left: 35px
+  .right-arrow
+    right: 35px
+
+  .nav
+    max-width: 800px
+    min-width: 150px
+    margin: 0 auto
+
+    ul
+      margin: auto
+      list-style: none
+      padding: 0
+      display: flex
+      justify-content: space-around
+      text-align: center
+      li
+        padding: 0 10px
+        position: relative
+        a
+          text-decoration: none
+          text-transform: uppercase
+          font-size: 2rem
+          font-family: 'Iceland', cursive
+          color: #888
+          &:hover
+            color: #4DD0E1
+          &:active
+            color: #4DD0E1
+      .hovered
+        a
+          color: #4DD0E1
+      .hovered::before
+        content: ''
+        display: block
+        position: absolute
+        bottom: -20px
+        left: 0px
+        height: 2px
+        background-color: #4DD0E1
+
+.container
+  max-width: 80%
+  display: flex
+  margin: 50px auto
+  position: relative
+
+  .left-container
+    // background: rgba(pink,0.5)
+    flex: 1
+    position: relative
+    height: 600px
+
+    .covenant-back
+      width: 350px
+      height: 600px
+      border-radius: 3px
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+      background-color: #263238
+      background-image: url('covenant_back.jpg')
+      background-size: cover
+      background-position: center
+      background-repeat: no-repeat
+      border: 10px solid #222
+
+  .right-container
+    // background: rgba(cyan,0.5)
+    flex: 2
+    padding: 10px 20px
+    padding-left: 75px
+
+    .heading
+      color: #4DD0E1
+      font-size: 8rem
+      text-transform: uppercase
+      font-family: 'Iceland', cursive
+
+    .genre-tab
+      display: inline-block
+      padding: 5px 20px
+      margin: 20px 10px
+      background-color: darken(desaturate(#4DD0E1,10%),10%)
+      border-radius: 1px
+      line-height: 2.6rem
+      text-transform: uppercase
+      font-size: 1.3rem
+      position: relative
+
+      .fa-caret-left
+        position: absolute
+        transform: rotate(-45deg)
+        bottom: -6px
+        left: 2px
+        color: darken(opacify(#4DD0E1, 0.4),40%)
+        font-size: 2.4rem
+
+    p
+      max-width: 500px
+      color: lighten(rgba(255,255,255,0.5),0.1)
+
+    .story-button
+      background-color: #4DD0E1
+      cursor: pointer
+
+      .fa-caret-right
+        font-size: 1.2rem
+        color: darken(opacify(#4DD0E1, 0.4),40%)
+        margin-right: 5px
